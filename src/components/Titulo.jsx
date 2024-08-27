@@ -1,3 +1,5 @@
+import '../styles/Titulo.css'
+
 function Titulo() {
 
     const imagem = 'https://i.ytimg.com/vi/rHa1XC71nXg/maxresdefault.jpg';
