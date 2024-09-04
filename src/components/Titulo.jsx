@@ -6,8 +6,8 @@ function Titulo() {
 
     return (
         <>
-            <h1>Teste de Título</h1>
-            <p>Só para ver se ta funcionando</p>
+            <h1>UUUUOOOOOOOOOOOUUUUUU</h1>
+            <p>OMAIGÃÃÃÃÃÃÃ</p>
 
             <img src={imagem} />
         </>
