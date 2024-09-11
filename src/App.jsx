@@ -1,13 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import Titulo from './components/Titulo'
+import React from 'react';
+import AppRoutes from './routes';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <Titulo />
-  )
-}
+    <div className="App">
+      <header>
+        <h1>Gestão de Carteirinhas de Vacinação</h1>
+      </header>
+      <AppRoutes />
+    </div>
+  );
+};
 
-export default App
+export default App;
