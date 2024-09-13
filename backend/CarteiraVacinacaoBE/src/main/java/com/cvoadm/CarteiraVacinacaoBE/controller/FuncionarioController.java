@@ -1,7 +1,6 @@
 package com.cvoadm.CarteiraVacinacaoBE.controller;
 
 import com.cvoadm.CarteiraVacinacaoBE.model.Funcionario;
-import com.cvoadm.CarteiraVacinacaoBE.service.FuncionarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,13 +24,13 @@ public class FuncionarioController {
     }
 
     @PutMapping("/{id}")
-    public Funcionario atualizar(@PathVariable Long id, @RequestBody Funcionario funcionario) {
+    public Funcionario atualizar(@PathVariable Integer id, @RequestBody Funcionario funcionario) {
         funcionario.setId(id);
         return funcionarioService.atualizar(funcionario);
     }
 
     @DeleteMapping("/{id}")
-    public void deletar(@PathVariable Long id) {
+    public void deletar(@PathVariable Integer id) {
         funcionarioService.deletar(id);
     }
 }
