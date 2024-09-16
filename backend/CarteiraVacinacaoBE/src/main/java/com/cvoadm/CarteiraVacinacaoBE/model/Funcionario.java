@@ -1,11 +1,9 @@
 package com.cvoadm.CarteiraVacinacaoBE.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "Funcionario")
 public class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,7 +11,8 @@ public class Funcionario {
 
     private String nome;
     private String email;
-    private String funcStatus;
+    private String senha;
+    private Boolean isAdmin;
 
     public Integer getId() {
         return id;
@@ -39,11 +38,19 @@ public class Funcionario {
         this.email = email;
     }
 
-    public String getStatus() {
-        return funcStatus;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setStatus(String status) {
-        this.funcStatus = status;
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public Boolean getAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(Boolean admin) {
+        isAdmin = admin;
     }
 }

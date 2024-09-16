@@ -1,13 +1,11 @@
 package com.cvoadm.CarteiraVacinacaoBE.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
+@Table(name = "Paciente")
 public class Paciente {
 
     @Id
@@ -16,10 +14,10 @@ public class Paciente {
 
     private String nome;
     private String telefone;
-    private Character genero;
-    private Date dataNasc;
+    private String genero;
+    private java.sql.Date dataNasc;
     private String endereco;
-    private Character cpf;
+    private String cpf;
 
 
     public Integer getId() {
@@ -46,11 +44,11 @@ public class Paciente {
         this.telefone = telefone;
     }
 
-    public Character getGenero() {
+    public String getGenero() {
         return genero;
     }
 
-    public void setGenero(Character genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
     }
 
@@ -70,11 +68,11 @@ public class Paciente {
         this.endereco = endereco;
     }
 
-    public Character getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(Character cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 }
