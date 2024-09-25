@@ -3,7 +3,7 @@ document.getElementById('Login').addEventListener('submit', function(event) {
   
     const formData = new FormData(this); // Captura os dados do formulário
   
-    fetch('https://localhost/3000', {
+    fetch('http://localhost:8080/api/funcionarios', {
       method: 'POST',
       body: formData
     })
