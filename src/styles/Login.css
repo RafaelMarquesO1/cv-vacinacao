@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 100%;
     height: 80vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
@@ -32,7 +32,7 @@ body {
 }
 
 .form-image img {
-    width: 31rem;
+    width: 29rem;
 }
 
 .form {
@@ -46,7 +46,7 @@ body {
 }
 
 .form-header {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     display: flex;
     justify-content: space-between;
 }

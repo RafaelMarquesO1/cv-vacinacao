@@ -12,7 +12,7 @@ const Login = () => {
         <div className="form">
             <form action="#" method="get">
                 <div className="form-header">
-                    <h1>Tela de Login Administrativa</h1>
+                    <h1>Tela do Funcionário Administrativo</h1>
                     
                     <div className="login-button">
                         <button><a href="#">Voltar para a home</a></button>
@@ -43,7 +43,7 @@ const Login = () => {
                 </div>
 
                 <div className="continue-button">
-                    <button><a href="#">Continuar</a></button>
+                    <button typeof="submit"><a href="#">Continuar</a></button>
                 </div>
             </form>
         </div>
