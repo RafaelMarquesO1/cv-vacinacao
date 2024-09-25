@@ -12,17 +12,14 @@ public class Vacinas {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "nome_vacina", nullable = false, length = 30)
     private String nomeVacina;
 
+    @Column(name = "lote", nullable = false, length = 150) // Certifique-se de que está configurado como NOT NULL
     private String lote;
 
-    private java.sql.Date dataAplicacao;
-
+    @Column(name = "vacStatus", nullable = true)
     private Boolean vacStatus;
-
-    @ManyToOne
-    @JoinColumn(name = "carteirinha_id")
-    private Carteirinha carteirinha;
 
 
     public Long getId() {
@@ -49,14 +46,6 @@ public class Vacinas {
         this.lote = lote;
     }
 
-    public Date getDataAplicacao() {
-        return dataAplicacao;
-    }
-
-    public void setDataAplicacao(Date dataAplicacao) {
-        this.dataAplicacao = dataAplicacao;
-    }
-
     public Boolean getVacStatus() {
         return vacStatus;
     }
@@ -64,10 +53,5 @@ public class Vacinas {
     public void setVacStatus(Boolean vacStatus) {
         this.vacStatus = vacStatus;
     }
-
-    public Carteirinha getCarteirinha() {
-        return carteirinha;
-    }
-
 }
 

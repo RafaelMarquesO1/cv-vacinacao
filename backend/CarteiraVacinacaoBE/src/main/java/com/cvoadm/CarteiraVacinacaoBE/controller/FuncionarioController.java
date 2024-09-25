@@ -1,43 +1,48 @@
 package com.cvoadm.CarteiraVacinacaoBE.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.cvoadm.CarteiraVacinacaoBE.model.Funcionario;
 import com.cvoadm.CarteiraVacinacaoBE.service.FuncionarioService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
-@RequestMapping("/funcionarios")
+@CrossOrigin(origins = "http://localhost:5173")
+@RequestMapping("/api/v1/funcionarios")  // Certifique-se de que o caminho está correto
 public class FuncionarioController {
 
-    private final FuncionarioService funcionarioService;
+    @Autowired
+    private FuncionarioService funcionarioService;
 
-    public FuncionarioController(FuncionarioService funcionarioService) {
-        this.funcionarioService = funcionarioService;
-    }
-
-    @GetMapping
-    public List<Funcionario> listarTodos() {
-        return funcionarioService.listarTodos();
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Funcionario> buscarPorId(@PathVariable Integer id) {
-        Optional<Funcionario> funcionario = funcionarioService.buscarPorId(id);
-        return funcionario.map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
-
-
+    // Criar um novo funcionário
     @PostMapping
-    public Funcionario salvar(@RequestBody Funcionario funcionario) {
-        return funcionarioService.salvar(funcionario);
+    public ResponseEntity<Funcionario> criar(@RequestBody Funcionario funcionario) {
+        Funcionario novoFuncionario = funcionarioService.salvar(funcionario);
+        return ResponseEntity.ok(novoFuncionario);
     }
 
+    // Listar todos os funcionários
+    @GetMapping
+    public ResponseEntity<List<Funcionario>> listarTodos() {
+        List<Funcionario> funcionarios = funcionarioService.listarTodos();
+        return ResponseEntity.ok(funcionarios);
+    }
+
+    // Atualizar um funcionário
+    @PutMapping("/{id}")
+    public ResponseEntity<Funcionario> atualizar(@PathVariable Integer id, @RequestBody Funcionario funcionario) {
+        funcionario.setId(id);
+        Funcionario funcionarioAtualizado = funcionarioService.salvar(funcionario);
+        return ResponseEntity.ok(funcionarioAtualizado);
+    }
+
+    // Deletar um funcionário
     @DeleteMapping("/{id}")
-    public void deletar(@PathVariable Integer id) {
+    public ResponseEntity<Void> deletar(@PathVariable Integer id) {
         funcionarioService.deletarPorId(id);
+        return ResponseEntity.noContent().build();
     }
 }
