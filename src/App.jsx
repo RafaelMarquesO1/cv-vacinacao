@@ -1,14 +1,9 @@
 import React from 'react';
-import AppRoutes from './routes';
+import Login from "./components/Login"
 
 const App = () => {
   return (
-    <div className="App">
-      <header>
-        <h1>Gestão de Carteirinhas de Vacinação</h1>
-      </header>
-      <AppRoutes />
-    </div>
+    <Login />
   );
 };
 
