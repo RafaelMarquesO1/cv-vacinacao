@@ -1,18 +1,7 @@
-document.getElementById('Login').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão do formulário
-  
-    const formData = new FormData(this); // Captura os dados do formulário
-  
-    fetch('http://localhost:8080/api/funcionarios', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Sucesso:', data);
-    })
-    .catch(error => {
-      console.error('Erro:', error);
-    });
-  });
-  
+import axios from 'axios'
+
+const api = axios.create({
+    baseURL: 'http://localhost:8080'
+})
+
+export default api
