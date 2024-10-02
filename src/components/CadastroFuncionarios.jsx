@@ -1,10 +1,10 @@
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Home.css";
+import "../styles/CadastroFuncionarios.css";
 import Trash from "../assets/img/trash.svg";
 import api from '../services/api';
 
-function Home() {
+function CadastroFuncionarios() {
   const [funcionarios, setFuncionarios] = useState([]);
   const [errors, setErrors] = useState({});
 
@@ -103,4 +103,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default CadastroFuncionarios;

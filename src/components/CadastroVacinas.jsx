@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import "../styles/Home.css";
+import "../styles/CadastroFuncionarios.css";
 import api from '../services/api';
 import { useNavigate } from 'react-router-dom';
 
