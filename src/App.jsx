@@ -1,24 +1,14 @@
-import Login from "./components/Login";
-
-function App() {
-  return (
-    <Login />
-  );
-}
-
-export default App;
-
-/*
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from './components/Home';
+import CadastroFuncionarios from "./components/CadastroFuncionarios";
 import CadastroVacinas from './components/CadastroVacinas';
+import Login from "./components/Login";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/cadastro-funcionarios" element={<CadastroFuncionarios />} />
         <Route path="/cadastro-vacinas" element={<CadastroVacinas />} />
       </Routes>
     </Router>
@@ -26,5 +16,3 @@ function App() {
 }
 
 export default App;
-
-*/

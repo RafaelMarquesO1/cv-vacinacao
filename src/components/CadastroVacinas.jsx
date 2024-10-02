@@ -84,7 +84,7 @@ function CadastroVacinas() {
                 <input placeholder="Status (ATIVO/INATIVO)" ref={inputVacStatus} />
                 {errors.vacStatus && <span style={{ color: 'red' }}>{errors.vacStatus}</span>}
                 <button type="button" onClick={createVacina}>Cadastrar</button>
-                <button type="button" onClick={() => navigate('/')}>Voltar ao Cadastro de Funcionários</button>
+                <button type="button" onClick={() => navigate('/cadastro-funcionarios')}>Voltar ao Cadastro de Funcionários</button>
             </form>
 
             {vacinas.map(vacina => (
