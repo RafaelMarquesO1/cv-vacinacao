@@ -1,15 +1,19 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import CadastroFuncionarios from "./components/CadastroFuncionarios";
-import CadastroVacinas from './components/CadastroVacinas';
 import Login from "./components/Login";
+import TelaPrincipal from "./components/TelaPrincipal"
+import ConsultarPacientes from "./components/ConsultarPacientes";
+import ConsultarFuncionarios from "./components/ConsultarFuncionarios";
+import ConsultarCampanhas from "./components/ConsultarCampanhas";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/cadastro-funcionarios" element={<CadastroFuncionarios />} />
-        <Route path="/cadastro-vacinas" element={<CadastroVacinas />} />
+        <Route path="/consultar-funcionarios" element={<ConsultarFuncionarios />} />
+        <Route path="/tela-principal" element={<TelaPrincipal />} />
+        <Route path="/consultar-pacientes" element={<ConsultarPacientes />} />
+        <Route path='/consultar-campanhas' element={<ConsultarCampanhas />} />
       </Routes>
     </Router>
   );

@@ -1,0 +1,185 @@
+/* ConsultarCampanhas.css */
+
+/* Paleta de Cores */
+:root {
+    --primary-color: #2ecc71;   /* Verde Vacinici */
+    --secondary-color: #27ae60; /* Verde mais escuro */
+    --background-color: #f4f7f6; /* Cinza claro para o fundo */
+    --text-color: #333333;      /* Cor do texto principal */
+    --button-color: #1abc9c;    /* Verde água para botões */
+    --button-hover-color: #16a085; /* Hover dos botões */
+    --danger-color: #e74c3c;    /* Cor para o botão de deletar (vermelho) */
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .main-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Estilo da barra lateral (sidebar) */
+  .sidebar {
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .sidebar .logo img {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .greeting p {
+    font-size: 18px;
+  }
+  
+  .sidebar .greeting strong {
+    font-size: 24px;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin: 20px 0;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .sidebar nav ul li:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo do conteúdo principal */
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .campanhas-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .campanha-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .campanha-card img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .campanha-card p {
+    margin: 10px 0;
+  }
+  
+  button {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover-color);
+  }
+  
+  button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  /* Estilo específico para o botão de deletar */
+  button.deletar {
+    background-color: var(--danger-color);
+  }
+  
+  button.deletar:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Formulário de adicionar campanha */
+  .login-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-box input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .login-box input[type="file"] {
+    padding: 0;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .campanhas-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .campanha-card {
+      width: 100%;
+      max-width: 400px;
+    }
+  
+    .login-box {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  

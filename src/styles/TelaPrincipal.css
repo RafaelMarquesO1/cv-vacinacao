@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F4F4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-container {
+    display: flex;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    width: 100vw; /* Ocupa toda a largura da tela */
+  }
+  
+  .sidebar {
+    background-color: #D8E8D8;
+    width: 25%; /* A sidebar ocupa 25% da largura da tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo img {
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  
+  .greeting {
+    text-align: center;
+    color: #152D10;
+  }
+  
+  .greeting p {
+    font-size: 18px;
+  }
+  
+  .greeting strong {
+    font-size: 20px;
+  }
+  
+  .menu {
+    margin-top: 40px;
+    width: 100%; /* A lista ocupa a largura total do container da sidebar */
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 15px 20px;
+    color: #152D10;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .menu li:hover {
+    background-color: #C9D9C8;
+    border-radius: 8px;
+  }
+  
+  .content {
+    background-color: #EDF2EB;
+    width: 75%; /* O conteúdo ocupa 75% da largura da tela */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .content h1, .content h2 {
+    margin-bottom: 20px;
+  }
+  
+  .content h1 {
+    color: #152D10;
+    font-size: 24px;
+  }
+  
+  .content h2 {
+    color: #6F925F;
+    font-size: 32px;
+  }
+  
+  button {
+    width: 250px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    border-radius: 30px;
+    background-color: #6F925F;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px; /* Margem no topo para espaçamento */
+    align-self: center; /* Centraliza o botão */
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  

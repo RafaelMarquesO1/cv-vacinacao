@@ -1,0 +1,123 @@
+/* Estilos gerais para a página de Consultar Funcionários */
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #00bfa6;
+    padding: 20px;
+    color: white;
+  }
+  
+  .logo img {
+    width: 100px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  .greeting {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .greeting strong {
+    font-size: 18px;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 15px 0;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .menu li:hover {
+    text-decoration: underline;
+  }
+  
+  /* Área principal de conteúdo */
+  .content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Botão de adicionar funcionário */
+  button {
+    background-color: #00bfa6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #00997a;
+  }
+  
+  /* Estilos do formulário de adicionar novo funcionário */
+  .login-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .login-box input {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .login-box button {
+    align-self: flex-end;
+    padding: 10px 20px;
+  }
+  
+  /* Lista de funcionários */
+  .funcionarios-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .funcionario-card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .funcionario-card p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .funcionario-card button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .funcionario-card button:hover {
+    background-color: #e60000;
+  }  

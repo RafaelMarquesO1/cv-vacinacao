@@ -8,8 +8,8 @@ function Login() {
 
   const validate = () => {
     const newErrors = {};
-    if(!inputEmailFuncionario.current.value) newErrors.EmailFuncionario = 'O E-mail é obrigatório';
-    if(!inputSenhaFuncionario.current.value) newErrors.SenhaFuncionario = 'A Senha é obrigatória';
+    if(!inputEmailFuncionario.current.value) newErrors.EmailFuncionario = 'O E-mail Ã© obrigatÃ³rio';
+    if(!inputSenhaFuncionario.current.value) newErrors.SenhaFuncionario = 'A Senha Ã© obrigatÃ³ria';
     
     return newErrors;
   }
